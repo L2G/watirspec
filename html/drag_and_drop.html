@@ -29,11 +29,11 @@
         }
       });
 
-      var report_event = function(report_text) {
-        var reportElement = $("#drop_reports");
-        var origText = reportElement.text();
-        reportElement.text(origText + " " + report_text);
-      }
+      var report_event = function (report_text) {
+          var reportElement = $("#drop_reports");
+          var origText = reportElement.text();
+          reportElement.text(origText + " " + report_text);
+      };
 
       $('body').on('mousedown', function() {
           report_event('down');

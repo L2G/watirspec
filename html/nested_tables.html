@@ -23,7 +23,7 @@ function buildRowsTest()
     container.appendChild(row);
     rowsTest.appendChild(table);
 
-    table.setAttribute("data-row-count", count)
+    table.setAttribute("data-row-count", count);
     table.setAttribute("data-browser-count", table.rows.length);
     table.setAttribute("id", "tbl" + idx);
   }
@@ -38,9 +38,9 @@ function buildRowsTest()
       table.appendChild(body);
       body.appendChild(container);
       container.appendChild(row);
-      rowsTest.appendChild(table)
+      rowsTest.appendChild(table);
 
-      table.setAttribute("data-row-count", count)
+      table.setAttribute("data-row-count", count);
       table.setAttribute("data-browser-count", table.rows.length);
       table.setAttribute("id", "tbl" + idx);
   }
@@ -48,7 +48,7 @@ function buildRowsTest()
   var sectionTags = [
       "tbody",
       "tfoot",
-      "thead",
+      "thead"
   ];
 
   var otherTags = [
@@ -59,7 +59,7 @@ function buildRowsTest()
       "script",
       "table",
       "td",
-      "th",
+      "th"
   ];
 
   var index = 0;
@@ -70,7 +70,7 @@ function buildRowsTest()
   for (i = 0; i < sectionTags.length; ++i)
       createRowNesting(sectionTags[i], 0, index++)
 
-  createRowNesting("tr", 1, index++)
+  createRowNesting("tr", 1, index++);
 
   for (i = 0; i < otherTags.length; ++i)
       createNoBodyRowNesting(otherTags[i], 0, index++)
@@ -78,10 +78,10 @@ function buildRowsTest()
   for (i = 0; i < sectionTags.length; ++i)
       createNoBodyRowNesting(sectionTags[i], 1, index++)
 
-  createNoBodyRowNesting("tr", 1, index++)
+    createNoBodyRowNesting("tr", 1, index++);
 
   document.body.appendChild(rowsTest);
-};
+}
 
 function buildCellsTest() {
   var cellsTest = document.createElement("div");
@@ -95,7 +95,7 @@ function buildCellsTest() {
       row.appendChild(container);
       container.appendChild(cell);
 
-      row.setAttribute("data-cell-count", count)
+      row.setAttribute("data-cell-count", count);
       row.setAttribute("data-browser-count", row.cells.length);
       row.setAttribute("id", "row" + idx);
 
@@ -110,7 +110,7 @@ function buildCellsTest() {
       row.appendChild(container);
       container.appendChild(cell);
 
-      row.setAttribute("data-cell-count", count)
+      row.setAttribute("data-cell-count", count);
       row.setAttribute("data-browser-count", row.cells.length);
       row.setAttribute("id", "row" + idx);
 
@@ -128,7 +128,7 @@ function buildCellsTest() {
       "tbody",
       "tfoot",
       "thead",
-      "tr",
+      "tr"
   ];
 
   var index = 0;
@@ -142,11 +142,11 @@ function buildCellsTest() {
   for (i = 0; i < tags.length; ++i)
       createHeaderCellNesting(tags[i], 0, index++);
 
-  createHeaderCellNesting("td", 1, index++)
-  createHeaderCellNesting("th", 1, index++)
+  createHeaderCellNesting("td", 1, index++);
+  createHeaderCellNesting("th", 1, index++);
 
   document.body.appendChild(cellsTest);
-};
+}
 
 function buildBodiesTest() {
   var bodiesTest = document.createElement("table");
@@ -161,7 +161,7 @@ function buildBodiesTest() {
       container.appendChild(row);
       bodiesTest.appendChild(body);
 
-      body.setAttribute("data-rows-count", count)
+      body.setAttribute("data-rows-count", count);
       body.setAttribute("data-browser-count", body.rows.length);
       body.setAttribute("id", "body" + idx);
   }
@@ -169,7 +169,7 @@ function buildBodiesTest() {
   var sectionTags = [
       "tbody",
       "tfoot",
-      "thead",
+      "thead"
   ];
 
   var otherTags = [
@@ -180,7 +180,7 @@ function buildBodiesTest() {
       "script",
       "table",
       "td",
-      "th",
+      "th"
   ];
 
   var index = 0;
@@ -190,10 +190,10 @@ function buildBodiesTest() {
   for (i = 0; i < sectionTags.length; ++i)
       createRowNesting(sectionTags[i], 0, index++);
 
-  createRowNesting("tr", 1, index++);
+    createRowNesting("tr", 1, index++);
 
   document.body.appendChild(bodiesTest);
-};
+}
 
 buildRowsTest();
 buildCellsTest();
